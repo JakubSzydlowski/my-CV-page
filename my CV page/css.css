@@ -1,0 +1,42 @@
+/* FONT */
+
+
+/* global */    
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;   
+}
+
+body {
+    font-size: 10px;
+    overflow: hidden !important;
+}
+/* colors */    
+
+:root {
+    --color1 : #06060f;
+    --color2 : #2a3048;
+    --color3 : #60638a;
+    --color4 : #9f9cd8;
+    --color5 : #e2ccea;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column ;
+    height: 100vh;
+    width: 100vw;
+}
+
+
