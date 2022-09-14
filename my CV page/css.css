@@ -25,18 +25,145 @@ body {
 
 
 /* HEADER */
-
+.logo img  {
+    height: 50px;
+    width: 50px;
+}
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem 2rem;
 }
 
 .menu {
     display: flex;
     flex-direction: column ;
+    justify-content: space-around;
+    text-align: center;
     height: 100vh;
     width: 100vw;
+    background: var(--color2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.8rem;
+    color: var(--color5);
+    font-weight: bold;
+    transform: translateX(1000%);
+
+
+}
+
+.menu.active{
+    transform: translateX(0);
+}
+
+.burger{
+    height: 3.4rem;
+    width: 3.4rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.burger.active{
+z-index: 10;
+}
+
+.burger.active > span {
+    background: var(--color4);
+}
+
+.burger span {
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 0.5rem;
+    background: var(--color2);
+    transition: ALL 0.3s ease-in-out;
+
+}
+
+.burger span:nth-child(2){
+    width: 90%;
+}
+.burger span:nth-child(3){
+    width: 80%;
+}
+
+.burger.active > span:nth-child(1){
+    transform: rotate(-45deg) translateY(1rem);
+
+}
+.burger.active > span:nth-child(2){
+    transform: rotate(45deg) translateY(-1.3rem);
+    width: 100%;
+
+}
+.burger.active > span:nth-child(3){
+  display: none;
 }
 
 
+
+
+
+
+/* deskopt menu */
+@media only screen and (min-width:1000px){
+    .burger{
+        display: none;
+    }
+    .menu{
+     position: unset;
+     color: var(--color1);
+     background: inherit;
+     list-style: none;
+     flex-direction: row;
+     height: inherit;
+     width: max-content;
+     gap: 5rem;
+     font-size: 1.2rem;
+     font-weight: normal;
+     align-items: center;
+cursor: pointer;
+transform: translateX(0);
+
+    }
+    .menu-link {
+        position: relative;
+    }
+    .menu-link::after{
+        content: "";
+        width: 0%;
+        height: 0.2rem;
+        background: var(--color4);
+        position: absolute;
+        bottom: -0.1rem;
+        left:0;
+        border-radius: 2rem;
+        transition: all 0.3s ease-in-out;
+    }
+    .menu-link:hover::after{
+        width: 100%;
+    }
+    .menu-link:first-child{
+        background: var(--color4);
+        padding: 0.2rem 1.5rem;
+        border-radius: 00.5rem;
+    }
+    .menu-link:first-child::after{
+    display: none;
+    }
+    }
+
+/* first view */
+.home img{
+    width: 50%;
+}
+.home-content {
+    font-size: 2 rem;
+}
