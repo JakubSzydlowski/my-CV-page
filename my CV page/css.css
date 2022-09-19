@@ -11,7 +11,6 @@ box-sizing: border-box;
 
 body {
     font-size: 10px;
-    overflow: hidden !important;
 }
 /* colors */    
 
@@ -23,7 +22,57 @@ body {
     --color5 : #e2ccea;
 }
 
+/* SECTION TITLE */
+.section-title {
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-align: center; 
+    margin: 5rem auto 3rem auto;
+    position: relative;
+    width: max-content;
+}
 
+.section-title-1 {
+background-color: var(--color2);
+color: var(--color4);
+padding: 0.4rem;
+border-bottom-left-radius: 1rem;
+border-top-right-radius: 0.5rem;
+display: inline;
+
+}
+
+.section-title-1::after{
+    position: absolute;
+    height: 0.3rem;
+    left: 20%;
+    bottom: -0.35rem;
+    background-color: var(--color4);
+    content: "";
+    border-bottom-left-radius: 2rem;
+    animation: 2s ease-in-out infinite alternate-reverse line-title-1;
+}
+
+@keyframes line-title-1
+{
+    from {
+    left: 5%;
+    width: 4rem;
+    }
+    to{
+    left: 86%;
+    width: 0.3rem;
+    border-radius: 1rem;
+
+    }
+       
+    }
+    
+  
+
+.section-title-2{
+color: var(--color2);
+}
 /* HEADER */
 .logo img  {
     height: 50px;
@@ -162,7 +211,7 @@ transform: translateX(0);
 
 /* first view */
 .home{
-    background-image: url(sunset-g10f5036a5_1920.jpg);
+    background-image: url(./images/sunset-g10f5036a5_1920.jpg);
     background-size:cover ;
     background-repeat: no-repeat;
     background-position: center;
@@ -242,3 +291,70 @@ transform: translateX(0);
 
 }
     }
+
+/* PROJECTS */
+
+.project-content {
+    display: grid;
+    margin: 3REM 0REM 4REM 0rem;
+    align-items: center;
+}
+.project-content-card{
+    margin: 3rem auto;
+    width: 80%;
+    box-shadow: #2a3048;
+
+}
+
+.project-content-card img{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5rem;
+
+}
+
+.project-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color2);
+    padding-right: 3rem;
+    border-bottom: 1px solid var(--color2);
+
+}
+.project-description{
+    font-size: 1rem;
+    padding: 0.4rem;
+    text-align: justify;
+    color: var(--color2);
+}
+.project-link img{
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0.3rem;
+}
+
+.technologies-title {
+    font-size: 1rem;
+    padding: 0.4rem;
+    text-align: justify;
+    color: var(--color2);
+    border-bottom: 2px solid var(--color2);
+    width: max-content;
+    margin-bottom: 1rem;
+}
+
+.technologies-icons {
+    display: flex;
+}
+.technologies-icons img{
+    height: 2.2rem;
+    width: 2.2rem;
+    margin: auto 0.8rem ;
+}
