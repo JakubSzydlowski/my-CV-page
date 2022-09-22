@@ -6,7 +6,8 @@
 * {
 margin: 0;
 padding: 0;
-box-sizing: border-box;   
+box-sizing: border-box;
+font-family:'Courier New', Courier, monospace;
 }
 
 body {
@@ -486,10 +487,10 @@ transform: translateX(0);
 
 @media screen and (min-width:900px){
     .technologies-item img{
-        width: 10rem;
+        width: 6rem;
         }
     .technologies-content {
-            width: 70%;
+            width: 80%;
             margin: 0 auto;
         }
         .technologies-item-title {
@@ -497,4 +498,88 @@ transform: translateX(0);
             font-size: 1.4rem;
         }
  
+}
+
+/* Contact */
+
+.contact img {
+    display: none;
+}
+
+.contact-form{
+    margin: 3rem auto;
+    width: 80%;
+   }
+
+.contact-form-field{
+    margin: 1rem;
+}
+.contact-form label{
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    padding: 0.3rem 0.3rem;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border-radius: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 0.3rem;
+}
+.contact-form-btn {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    background-color: var(--color3);
+    border-radius: 0.5rem;
+    color: aliceblue;
+    height: 2rem;
+    font-size: 1rem ;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    opacity: 100%;
+    transition: all ease-in-out 0.3s;
+    font-weight: bold;
+}
+.contact-form-btn:hover{
+    color: var(--color1);
+    opacity: 90%;
+}
+
+@media screen and (min-width:600px){
+    .contact-form{
+        width: 60%;
+       }
+}
+
+@media screen and (min-width:1100px){
+    .contact-form{
+        width: 55%;
+       }
+    .contact-form label{
+        font-size: 1.2rem;
+    }
+    .contact-form-btn {
+        font-size: 1.2rem ;
+    }
+}
+@media screen and (min-width:1400px){
+    .contact-form{
+        width: 50%;
+       }
+       .contact-form label{
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width:1600px){
+    .contact-form{
+        width: 50%;
+       }
+}
+@media screen and (min-width:1750px){
+    .contact-form{
+        width: 40%;
+       }
 }
