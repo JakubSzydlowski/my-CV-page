@@ -18,8 +18,6 @@ window.addEventListener('scroll', stickHeader);
 
 const menu= document.querySelector('.menu');
 const burgerBtn= document.querySelector('.burger')
-const burgerBtnActive= document.querySelector('.burger.active')
-
 const burgerBtnSpans = document.querySelectorAll('.burger span');
 
 burgerBtn.addEventListener('click', ()=> {
@@ -27,19 +25,10 @@ burgerBtn.addEventListener('click', ()=> {
     menu.classList.toggle('active');
 });
 
-burgerBtn.addEventListener("mouseenter", () =>{
-
-burgerBtnSpans[0].style.backgroundColor = "#06060f";
-burgerBtnSpans[1].style.backgroundColor = "#06060f";
-burgerBtnSpans[2].style.backgroundColor = "#06060f";
-
-})
-burgerBtn.addEventListener("mouseleave", () =>{
-  burgerBtnSpans[0].style.backgroundColor = "#e2ccea";
-  burgerBtnSpans[1].style.backgroundColor = "#e2ccea";
-  burgerBtnSpans[2].style.backgroundColor = "#e2ccea";
-
-  })
+burgerBtn.onmouseover = function () {
+  console.log('hej')
+burgerBtnSpans.style.backgroundColor="black";
+}
 
 
 
