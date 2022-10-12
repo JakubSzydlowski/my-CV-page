@@ -53,7 +53,7 @@ menuLinks.forEach((link) =>
     const section =
       document.querySelector(`.${key}`).getBoundingClientRect().top +
       window.pageYOffset -
-      110;
+      63;
 
     menu.classList.remove('active');
     burgerBtn.classList.remove('active');

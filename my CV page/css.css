@@ -24,15 +24,11 @@ body {
     --main: linear-gradient(
         to bottom,
         #000000,
-        #000000,
-        #01000a,
-        #130025,
-        #8f6bd6,
-        #936ad0,
-        #9a65c7,
-        #9f60be,
-        #a45bb5,
-        #b268b8
+        #8c88c5,
+        #9f9cd8,
+        #60638a,
+        #9f9cd8,
+        #e2ccea
       );
 }
 
@@ -241,11 +237,13 @@ z-index: 10;
 /* first view */
 .home{
     background-image: url(./images/sunset-g10f5036a5_1920.jpg);
+    
     background-size:cover ;
     background-repeat: no-repeat;
     background-position: center;
+
     position: relative;
-    height: 95vh;
+    height: 106vh;
     top: -6rem;
 
 }
@@ -253,7 +251,7 @@ z-index: 10;
     font-size: 1.7rem;
     color: var(--color3);
     position: absolute;
-    bottom: 4rem;
+    bottom: 6rem;
     left: 1rem;
     
 }
@@ -262,7 +260,7 @@ z-index: 10;
     width: 30%;
     position: absolute; 
     left: 35%;
-    bottom: 1rem;
+    bottom: 4rem;
     border: 1px var(--color3)  ;
     border-radius: 0.5rem;
     background-color: transparent;
@@ -271,6 +269,10 @@ z-index: 10;
     justify-content: center;
     transition: 0.2s ease-in-out;
 }
+
+.scroll-down::after{
+    display: none;
+}
 .scroll-down-element-1 {
     height: 0.2rem;
     width: 40%;
@@ -278,7 +280,6 @@ z-index: 10;
     margin-top: 1rem;
     transition: 0.2s ease-in-out;
     animation: scroll-move 2s infinite alternate-reverse;
-
 }
 .scroll-down-element-2 {
     margin-top: 1rem;
@@ -309,11 +310,11 @@ z-index: 10;
 @media only screen and (min-width:1200px){
     .home-content {
     font-size: 2rem;
-    bottom: 4rem;
+    bottom: 7rem;
 }
 .home{
 
-    height: 90vh;
+    height: 106vh;
 
 }
     }
@@ -562,7 +563,6 @@ z-index: 10;
     width: 50%;
     background-color: var(--color3);
     border-radius: 0.5rem;
-    background-image: var(--main);
 
     height: 2rem;
     font-size: 1rem ;
@@ -572,10 +572,12 @@ z-index: 10;
     opacity: 100%;
     transition: all ease-in-out 0.3s;
     font-weight: bold;
+
 }
 .contact-form-btn:hover{
-    color: var(--color1);
     opacity: 90%;
+    background-color: var(--color3);
+    box-shadow: 5px 10px #8c88c5;
 }
 
 @media screen and (min-width:600px){
